@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Some title</title>
+    </head>
+    <body>
+        <ul>
+            <li><button class="animal">Cat</button></li>
+            <li><button class="animal">Dog</button></li>
+            <li><button>Sheep</button></li>
+            <li><button>Goat</button></li>
+            <li><button>Pig</button></li>
+            <li><button>Cow</button></li>
+			<li><button class="robot">R2D2</button></li>
+			<li>Something else</li>
+        </ul>
+        <div>
+            <img src="cat.jpg" alt="Image of a cat"/>
+        </div>
+		<script type="text/javascript">
+            const animalButtons = document.getElementById('animal-buttons')
+            const animalImage = document.getElementById('animal-image')
+
+            document.addEventListener('click', (event) => {
+                const clickedButton = event.target;
+
+                if(clickedButton.type === 'button' && clickedButton.classList.contains('animal')) {
+                    const animalName = clickedButton.innerText.toLowerCase();
+
+                    animalImage.src = `${animalName}.jpg`
+                    animalImage.alt = `Image of a ${animalName}`
+                }
+            })
+        </script>
+
+    </body>
+</html>
