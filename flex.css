@@ -13,4 +13,5 @@ html, body {
     display: flex;
     border-style: solid;
     flex-direction: row;
+    justify-content: space-evenly; 
 }
